@@ -1,0 +1,36 @@
+.dark,
+.light {
+    transition: color 200ms, background-color 200ms, fill 200ms, border 200ms;
+}
+
+*::-webkit-scrollbar {
+    width: 4px;
+}
+
+.app-container {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+
+    &.light {
+        background-color: #eaeaea;
+        color: #1b1b1b;
+
+        &::-webkit-scrollbar-thumb,
+        & *::-webkit-scrollbar-thumb {
+            background: #1b1b1b60;
+        }
+    }
+
+    &.dark {
+        background-color: #1b1b1b;
+        color: #eaeaea;
+
+        &::-webkit-scrollbar-thumb,
+        & *::-webkit-scrollbar-thumb {
+            background: #eaeaea60;
+        }
+    }
+}
